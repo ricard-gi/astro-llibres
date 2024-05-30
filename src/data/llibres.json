@@ -3,14 +3,14 @@
 		"titol": "ZOZO DORMILON",
 		"autor": "BRUNO DOUIN",
 		"imatge": "zozo_dormilon.jpg",
-        "oferta": 1
+        "oferta": true
 	},
 	{
 		"id": "llibre2",
 		"titol": "JA NO M'AGRADEN ELS LLIBRES",
 		"autor": "daisy hirst",
 		"imatge": "ya_no_me_gustan_los_libros_cat.jpg",
-        "oferta": 0
+        "oferta": false
 	},
     {
 		"id": "llibre3",

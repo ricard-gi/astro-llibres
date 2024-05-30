@@ -3,23 +3,24 @@
 const {dades} = Astro.props;
 const {autor, titol, imatge, id, oferta} = dades;
 
-const backgroundColor = oferta ? "yellow" : "white";
+const colorDeFons = oferta ? "yellow" : "white";
 
 
 ---
 
-<style define:vars={{backgroundColor}}>
+<style define:vars={{colorDeFons}}>
     .llibre {
         display: inline-block;
         border: 1px solid blue;
         padding: 20px;
-        background-color: var(--backgroundColor);
+        background-color: var(--colorDeFons);
         margin: 20px;
         text-align: center;
     }
 
     img {
-        width: 100%;
+        heigth: 200px;
+        margin: auto;
     }
 
     h1 {
@@ -28,6 +29,7 @@ const backgroundColor = oferta ? "yellow" : "white";
 
     h2 {
         font-size: 1.5rem;
+
     }
 
 </style>
