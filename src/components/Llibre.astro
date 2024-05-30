@@ -1,0 +1,41 @@
+---
+
+const {dades} = Astro.props;
+const {autor, titol, imatge, id, oferta} = dades;
+
+const backgroundColor = oferta ? "yellow" : "white";
+
+
+---
+
+<style define:vars={{backgroundColor}}>
+    .llibre {
+        display: inline-block;
+        border: 1px solid blue;
+        padding: 20px;
+        background-color: var(--backgroundColor);
+        margin: 20px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+</style>
+
+<div class="llibre">
+    <img src={`/img/${imatge}`} alt={titol} />
+    <h1>{titol}</h1>
+    <h2>{autor}</h2>
+    <a href={"/llibres/"+id} >MES INFO...</a>
+
+</div>

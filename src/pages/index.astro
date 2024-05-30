@@ -1,0 +1,25 @@
+---
+import Base from "../layouts/Base.astro";
+import Llibre from "../components/Llibre.astro";
+import llibres from "../data/llibres.json";
+
+
+---
+
+<style is:global>
+
+	a {
+		color: green;
+	}
+</style>
+
+
+<Base>
+
+<h1>llista de llibres</h1>
+
+{
+	llibres.map(llibre => <Llibre dades={llibre} />)
+}
+
+</Base>

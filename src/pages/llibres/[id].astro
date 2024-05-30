@@ -1,0 +1,38 @@
+---
+import Base from "../../layouts/Base.astro";
+import llibres from "../../data/llibres.json";
+
+const {id} = Astro.params;
+const {titol, oferta} = Astro.props;
+
+
+
+export async function getStaticPaths() {
+
+    return llibres.map(llibre => ({params: {id: llibre.id}, props: {...llibre}}))
+    /*
+  return ret[
+    { params: { post: 'test' },  props:{ coloret: "red", titol:"color vermell"} },
+    { params: { post: 'test2' }, props:{ coloret: "green", titol: "color verd"} },
+    { params: { post: 'test3' }, props:{ coloret: "blue", titol: "color blau"} },
+    { params: { post: 'test4' }, props:{ coloret: "yellow", titol: "color groc"} },
+    
+  ]*/
+}
+---
+
+<style >
+
+  h3 {
+    color: red;
+  }
+</style>
+<Base>
+
+    <h1>LLIBRE {id}</h1>
+    <h2>{titol}</h2>
+    {
+      oferta ?  <h3>OFERTA!</h3> : null
+    }
+
+</Base>
